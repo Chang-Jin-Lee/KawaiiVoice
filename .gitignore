@@ -1,0 +1,34 @@
+# 연구용으로 클론한 외부 저장소 (scripts/fetch_repos.sh 로 재현)
+external/
+
+# 오디오 소스 및 산출물
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.aiff
+audio/
+raw/
+out/
+
+# 모델 가중치 / 인덱스
+*.pth
+*.index
+*.ckpt
+*.safetensors
+*.onnx
+models/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
