@@ -147,23 +147,27 @@ APPLIO_DIR=/path/to/Applio \
 
 ## Pipeline
 
+```mermaid
+flowchart TD
+    A["🎙️ Male actor records<br/>emotion and timing intact"] --> B{"Timbre<br/>direction set?"}
+    B -- not yet --> C["⚡ Chatterbox VC<br/>0 min training · MIT"]
+    C --> B
+    B -- set --> D["👧 Female speaker dataset<br/>20-40 min · rights-explicit contract"]
+    D --> E["🧠 Train RVC in Applio<br/>48kHz · korean-hubert-base · RefineGAN"]
+    E --> F["🔀 Applio batch_infer<br/>auto pitch 255Hz · formant shifting"]
+    F --> G["🎚️ De-ess → loudness normalise → trim silence"]
+    G --> H["🎮 Unreal<br/>Sound Concurrency · ducking · bark cooldown"]
+
+    classDef key stroke-width:3px
+    class E,F key
 ```
-Male actor records (emotion and timing intact)
-        ↓
-Validate character timbre direction with Chatterbox VC     [0 min training, MIT]
-        ↓
-Acquire a female speaker dataset in that direction         [rights-explicit contract]
-        ↓
-Train an RVC model in Applio    48kHz / korean-hubert-base / RefineGAN
-        ↓
-Applio batch_infer
-  --embedder_model korean-hubert-base      ← Korean phonemes
-  --proposed_pitch True --threshold 255    ← per-clip auto pitch
-  --formant_shifting True                  ← perceived-gender correction
-        ↓
-De-ess → loudness normalisation → silence trim
-        ↓
-Unreal (Sound Concurrency · ducking · bark cooldown)
+
+The three lines that matter:
+
+```bash
+--embedder_model korean-hubert-base       # Korean phoneme preservation
+--proposed_pitch True --threshold 255     # per-clip automatic pitch
+--formant_shifting True                   # perceived-gender correction
 ```
 
 ## ⚠️ Voice rights notice
