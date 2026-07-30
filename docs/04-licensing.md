@@ -12,7 +12,7 @@ Applio가 MIT라는 사실은 *도구*를 자유롭게 쓸 수 있다는 뜻이�
 
 | 도구 | 라이선스 | 상업 게임 | 비고 |
 |---|---|---|---|
-| **IAHispano/Applio** | MIT | ✅ | 코드 및 저장소 기본 가중치 |
+| **IAHispano/Applio** | MIT (+ Terms of Use) | ✅ | 코드·기본 가중치 모두 MIT. 별도 약관 존재, 아래 참조 |
 | **RVC-Project/RVC-WebUI** | MIT | ✅ | |
 | **resemble-ai/chatterbox** | MIT | ✅ | **가중치도 MIT.** 출력에 Perth 워터마크 삽입 |
 | **w-okada/voice-changer** | MIT | ✅ | LICENSE 원문 MIT (배지는 부속 NOTICE 때문에 NOASSERTION) |
@@ -24,6 +24,18 @@ Applio가 MIT라는 사실은 *도구*를 자유롭게 쓸 수 있다는 뜻이�
 | 2noise/ChatTTS | AGPL-3.0 | ❌ 권장 안 함 | 전염성 |
 | svc-develop-team/so-vits-svc | AGPL-3.0 + 아카이브 | ❌ | |
 | Plachtaa/seed-vc | GPL-3.0 + 아카이브 | ⚠️ | 신규 도입 이유 없음 |
+
+### Applio — MIT + 별도 Terms of Use
+
+Applio는 MIT 외에 [`TERMS_OF_USE.md`](https://github.com/IAHispano/Applio/blob/main/TERMS_OF_USE.md)를 별도로 둔다. README에 따르면 **저장소를 크게 수정하지 않고 공식 버전을 그대로 쓰는 경우 이 약관도 준수해야 한다.**
+
+원문 확인 결과 상업적 사용은 명시적으로 허용된다:
+
+> **Commercial Use**: Creating content for commercial purposes, provided that appropriate rights and permissions are obtained and all legal and ethical standards are adhered to.
+
+- 코드와 **저장소 기본 가중치 모두 MIT** — 수정·재배포·상업적 사용 가능
+- 약관의 핵심 의무는 **처리하는 오디오의 권리를 확보할 책임**이다 (본 문서 4절과 동일한 요구)
+- Applio 측은 상업적 사용 시 `support@applio.org` 문의를 권장한다. 의무는 아니지만, 상업 출시 규모라면 확인 메일을 남겨 기록을 남기는 편이 안전하다.
 
 ### GPL / AGPL 관련 정리
 

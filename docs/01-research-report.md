@@ -91,6 +91,14 @@ ChatGPT는 이 문제를 "단점"으로만 적고 대책을 주지 않았다. �
 
 **(3) 클립별 자동 피치 계산** — 아래 2.4에서 상술
 
+**단, 알고 써야 할 점:** Applio README에 다음 공지가 있다.
+
+> "Applio will no longer receive frequent updates. Going forward, development will focus mainly on security patches, dependency updates, and occasional feature improvements. This is because the project is already stable and mature with limited room for further improvements."
+
+즉 **유지보수 모드**다. 최종 푸시(2026-07-29)가 활발해 보이지만 실제로는 노트북·의존성 업데이트 수준이다. 그럼에도 본선 선택은 유효하다 — 이 프로젝트에 필요한 기능(한국어 임베더, 포먼트, 자동 피치)은 모두 이미 들어있고, 게임 더빙은 파이프라인 안정성이 신기능보다 중요하다. 다만 **새 기능을 기대하고 의존해선 안 된다.**
+
+또한 Applio는 MIT 외에 별도 [`TERMS_OF_USE.md`](https://github.com/IAHispano/Applio/blob/main/TERMS_OF_USE.md)를 두고 있다 → [04-licensing.md](04-licensing.md) 참조.
+
 ### 2.4 ⚠️ "음높이를 +8~+12 반음으로 시험한다" — 배치 작업에서 위험한 조언
 
 수백 개 대사를 고정 오프셋으로 처리하면 안 된다. 성우의 중심 피치는 **테이크마다 달라진다** (외침 vs 속삭임에서 한 옥타브 차이가 난다). 고정 +12는 외침 대사에서 과보정돼 삑사리가 난다.
